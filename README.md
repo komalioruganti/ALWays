@@ -9,3 +9,4 @@
 <img src="https://user-images.githubusercontent.com/95839946/205997282-a84493aa-e81d-40c0-a459-8df9e9f463c0.png" width="100"  >
 
 # How 
+<img src="https://user-images.githubusercontent.com/95839946/205998490-65b7442e-71e3-4a3f-8e85-99c4b9d9b19d.png">
