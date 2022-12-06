@@ -1,0 +1,64 @@
+body{
+    background-color: rgba(253,247,227,1);
+  margin:0;
+  }
+  .date{
+  margin-left: 65rem;
+    text-align: center;
+    width : 10rem;
+    height:2rem;
+    background-color: #FFA09F;
+  border-radius: 2rem;
+    font-family: Playfair Display;
+  }
+  .navbar{
+    width: 5.8rem;
+    height:37.5rem;
+    background-color: #FDCBC0;
+    display:inline-block;
+    position: fixed;
+  }
+  .icons{
+    list-style-type: none;
+  padding-left: 1.3rem;
+  margin:0;
+  
+  }
+  .icons li:nth-child(1){
+  padding-top: 7.5rem;
+  }
+  .icons li{
+    padding-top: 1rem;
+  }
+  
+  .description{
+    width: 30rem;
+    height: 10.625rem;
+    display:inline-block;
+    padding:0;
+    margin: 0;
+  }
+  h1{
+    font-family: Playfair Display;
+    margin: 2rem 0 0 13rem;
+      font-size: 4.5rem;
+  }
+  .title-text{
+    margin-left:  13rem;
+    font-family: Libre Baskerville;
+    color:#FFA09F;
+    font-weight: Italic;
+    font-size: 0.8rem;
+  }
+  .descrip-text{
+      margin-left:  12rem;
+      font-size: 1.5rem;
+      font-family: Playfair Display;
+      line-height: 2.5rem;
+      }
+  .home_img{
+        display: inline-block;
+        margin-left: 10rem;
+        margin-top: 5rem;
+      }
+ 

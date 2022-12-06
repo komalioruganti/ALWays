@@ -1,0 +1,237 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+ body{
+  background: rgba(253, 247, 227, 1);
+}
+
+.navbar {
+  width: 5.8rem;
+  height: 37.5rem;
+  background-color: #FDCBC0;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+}
+
+.icons {
+  list-style-type: none;
+  padding-left: 0.7rem;
+  margin: 0;
+  margin-left:10px;
+}
+
+.icons li:nth-child(1) {
+  padding-top: 7.5rem;
+}
+
+.icons li {
+  padding-top: 1rem;
+}
+.monthly-calendar{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.wrapper{
+  background-color: #fff9f7;
+  width: 450px;
+  border-radius: 10px;
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+header .current-date{
+  font-size: 1.49rem;
+  font-weight: 500;
+  color: #FFA09F;
+}
+header .calender-icons span{
+height: 38px;
+width:38px;
+margin: 0 1px;
+  text-align: center;
+  line-height: 38px;
+  border-radius:50%;
+  cursor: pointer;
+  font-size:1.9rem;
+  color:#FDCBC0;
+}
+header .calender-icons span:hover{
+  background-color: rgba(253, 247, 227, 1) ;
+}
+header .calender-icons span:last-child{
+  margin-right: -10px;;
+}
+.calendar{
+  padding: 20px;
+}
+.calendar ul{
+   display:flex;
+   list-style: none;
+   flex-wrap: wrap;
+   text-align: center;
+}
+.calendar .days li{
+  margin-bottom :30px;
+  cursor: pointer;
+  z-index: 1;
+}
+.calendar li.inactive{
+  color:#aaa;
+}
+.calendar li.active{
+  color:white;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  margin-bottom :30px;
+  
+}
+.calendar ul li{
+  width: calc(100%/7);
+  position:relative;
+}
+.calendar .days  li::before{
+  content: "";
+  position:absolute;
+  height:40px;
+  width: 40px;
+  top:50%;
+  left:50%;
+  transform :translate(-50%,-50%);
+border-radius: 50%;
+  z-index: -1;
+}
+.days  li:hover::before{
+  background-color: #ffd1d1;
+}
+.calendar li.active::before{
+  background-color: #FFA09F;
+}
+/*
+#events{
+  display: inline-block;
+  vertical-align: top;
+  width: 310px;
+  background-color: #FFA09F;
+  padding: 10px;
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+  left:29.8rem;
+  top:10rem;
+  z-index: 1;
+  position:absolute;
+  color:rgba(253, 247, 227, 1);
+}
+
+#events-log div {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+ display: hidden;
+}
+.event-input{
+  border: hidden;
+  border-bottom: 2px solid rgba(253, 247, 227, 1);
+  background-color: #FFA09F;
+  height:20%;
+  width:60%;
+  outline: 0;
+}
+.calender{
+  padding: 20px 40px;
+  width: 1264px;
+  padding-left: 100px;
+  position: relative;
+
+}
+.month{
+  padding:15px;
+}
+.months-container{
+  width: 100px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.month-container{
+  background-color: #FDCBC0;
+  padding:20px;
+  min-width: 40px;
+  box-shadow: 15px 15px 40px rgba(0,0,0,0.15);
+}
+
+.calendar table.month th.month-title {
+    font-size: 1.9rem;
+    color: rgb(30, 28, 28);
+    font-weight: 200;
+    padding-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+}
+.calendar table.month td.day .day-content{
+  padding: 6px 10px;
+}
+td,th{
+  padding :15px;
+  font-size: 1rem;
+}
+td:first-child, td:last-child,tr:nth-child(2) th:first-child,
+tr:nth-child(2) th:last-child{
+  color: #f75c90;
+}
+th.day-header{
+  color: white;
+  font-size:0.9rem;
+}
+tr,td{
+  color:black;
+  font-size:0.9rem;
+}
+table.month td.day .day-content:hover{
+background-color: #FFA09F;
+color:white;
+}
+.calendar .calendar-header{
+  border: none;
+}
+.calendar .calendar-header .year-title{
+  font-size: 2.2rem;
+  font-family: 'Dancing Script', cursive;
+  color: black;
+}
+.calendar .calendar-header .year-neighbor1{
+  font-size: 1.5rem;
+}
+.calendar .calendar-header .year-neighbor2{
+  font-size: 1rem;
+}
+.add_button{
+  border-radius: 50%;
+  padding: 20px;
+  background-color:#da8ba5 ;
+  border: none;
+  color: white;
+  margin-left:90%;
+  margin-bottom: 5%;
+  font-family: 'Quicksand', sans-serif;
+font-size: 140%;
+width:5%;
+}
+.add_button:hover{
+  background-color:#f75c90 ;
+ 
+}
+.calendar .calendar-header .year-neighbor2 {
+  display: none;
+} */
