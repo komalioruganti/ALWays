@@ -1,5 +1,5 @@
 # ALWays👩‍👧‍👦
-**A one stop solution for girls to educate themselves**
+**A one stop destination for girls to educate themselves**
 
 <img src="https://user-images.githubusercontent.com/95839946/205998490-65b7442e-71e3-4a3f-8e85-99c4b9d9b19d.png">
 
@@ -28,13 +28,13 @@
 ##  Inspiration 
 
 ## What this app does 🤔:
-ALWays is a web application to empower girls across the world. This app 
+ALWays is a web application to empower girls across the world. This app helps young girls to develop healthy period tracking habits. In this app, the user can also educate themselves reagrding various topics like period cramps, consent etc. It also enables them to contact other fellow girls and share their problems and experiences of various problems they had to face. 
 
 ## Features:
    
-   * ChatRoom: Connect and chat with people from across the globe and ask for guidance regarding your problems.
-   * Calendar: The calendar feature helps girls in tracking their menstrual cycles.
-   * Articles section: View articles from various news sources and find solutions to the queries you have.
+   * ChatRoom : Connect and chat with people from across the globe and ask for guidance regarding your problems.
+   * Calendar : The calendar feature helps girls in tracking their menstrual cycles.
+   * Articles section : View articles from various news sources and find solutions to the queries you have.
 
 ## Preview
 <img src="https://user-images.githubusercontent.com/95839946/206482614-ef396c22-3671-41b6-b9e6-5d9ce9530369.png" width="500">
