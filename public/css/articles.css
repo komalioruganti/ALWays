@@ -13,32 +13,6 @@ body {
   font-family: Playfair Display;
 }
 
-.navbar {
-  width: 5.8rem;
-  height: 37.5rem;
-  background-color: #FDCBC0;
-  display: inline-block;
-  position: fixed;
-  top: 0;
-  padding-left:0;
-}
-
-
-
-.icons {
-  list-style-type: none;
-  padding-left: 0.45rem;
-  margin: 15px;
-}
-
-.icons li:nth-child(1) {
-  padding-top: 7.5rem;
-}
-
-.icons li {
-  padding-top: 1rem;
-}
-
 
 li .post{
   padding-bottom:1rem;

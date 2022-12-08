@@ -1,57 +1,30 @@
 body {
-    background-color: rgba(253, 247, 227, 1);
-    margin: 0;
-  }
+  background-color: rgba(253, 247, 227, 1);
+  margin: 0;
+}
+
+.date {
+  margin-left: 65rem;
+  text-align: center;
+  width: 10rem;
+  height: 2rem;
+  background-color: #FFA09F;
+  border-radius: 2rem;
+  font-family: Playfair Display;
+}
+.input-group{
+  width: 60rem;
+  height:3rem;
+  background-color: white;
+  margin-left: 12rem;
+  margin-top: 2rem;
+  position:absolute;
+  top:23rem;
   
-  .date {
-    margin-left: 65rem;
-    text-align: center;
-    width: 10rem;
-    height: 2rem;
-    background-color: #FFA09F;
-    border-radius: 2rem;
-    font-family: Playfair Display;
-  }
-  
-  .navbar {
-    width: 5.8rem;
-    height: 37.5rem;
-    background-color: #FDCBC0;
-    display: inline-block;
-    position: fixed;
-    top: 0;
-    padding-left:0;
-  }
-  
-  
-  
-  .icons {
-    list-style-type: none;
-    padding-left: 0.45rem;
-    margin: 15px;
-  }
-  
-  .icons li:nth-child(1) {
-    padding-top: 7.5rem;
-  }
-  
-  .icons li {
-    padding-top: 1rem;
-  }
-  .input-group{
-    width: 60rem;
-    height:3rem;
-    background-color: white;
-    margin-left: 12rem;
-    margin-top: 2rem;
-    position:absolute;
-    top:23rem;
-    
-  }  
-  .search-img{
-    width:20rem;
-    position: absolute;
-    left:30rem;
-    top:2rem;
-  }
-  
+}  
+.search-img{
+  width:20rem;
+  position: absolute;
+  left:30rem;
+  top:2rem;
+}

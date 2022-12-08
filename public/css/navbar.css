@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+  }
+.navbar {
+    width: 5.8rem;
+    height: 37.5rem;
+    background-color: #FDCBC0;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    padding: 0;
+  }
+  
+  .icons {
+    list-style-type: none;
+    padding-left: 0.7rem;
+    margin: 0;
+    margin-left:10px;
+  }
+  
+  .icons li:nth-child(1) {
+    padding-top: 7.5rem;
+  }
+  
+  .icons li {
+    padding-top: 1rem;
+  }
