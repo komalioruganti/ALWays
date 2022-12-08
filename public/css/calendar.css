@@ -14,7 +14,7 @@
 .monthly-calendar{
   display:flex;
   align-items: center;
-  justify-content: center;
+ margin-left:10rem;
   min-height: 100vh;
 }
 .wrapper{
@@ -97,3 +97,51 @@ border-radius: 50%;
   background-color: #FFA09F;
 }
 
+#events{
+  display: inline-block;
+  vertical-align: top;
+  width:500px;
+  background-color: #FFA09F;
+  padding: 10px;
+  height:30rem;
+  border-radius: 20px;
+  left:43rem;
+  top:5rem;
+  z-index: 1;
+  position:absolute;
+  color:rgba(253, 247, 227, 1);
+}
+
+#events-log div {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+ display: hidden;
+}
+.event-date{
+  position:absolute;
+  top : 2rem;
+  left: 3rem;
+  font-size: 2rem;;
+}
+.event-input{
+  border: hidden;
+  border-bottom: 2px solid rgba(253, 247, 227, 1);
+  background-color: #FFA09F;
+  height:3rem;
+  width:60%;
+  outline: 0;
+  position: absolute;
+  top: 6rem;
+  left:3rem;
+}
+.btn{
+  position: absolute;
+  top: 6rem;
+  left:23rem;
+}
+.events{
+  position: absolute;
+  left:3rem;
+  top:10rem;
+}

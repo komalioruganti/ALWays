@@ -7,11 +7,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="css/calendar.css">
-     <link rel="stylesheet" href="css/navbar.css">
+     <link rel="stylesheet" href = "css/navbar.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  </head>
+  
+    </head>
   <body>
     <div class="navbar">
 
@@ -64,10 +66,10 @@
             
         </p>
         <div class="calender-icons">
-            <span class="material-symbols-outlined">
+            <span id = "prev" class="material-symbols-outlined">
                 chevron_left
                 </span>
-                <span class="material-symbols-outlined">
+                <span id = "next" class="material-symbols-outlined">
                     chevron_right
                     </span>
         </div>
@@ -86,16 +88,24 @@
     </div>
   </div>
 </div>
-  <!-- <div id="events">
-    <h3>Events</h3>
-    <input class="event-input" type="text" name="event_input" placeholder="Your event">
-  </div>
-    <div data-provide="calendar" class="calendar"></div> -->
-   
+<div id = "events">
+    <h3 class="event-date">December 8th</h3>
+    <ul type="disc" class="events">
+        <% for(let i = 0; i<newListItem.length; i++){ %>
+        <li> <%= newListItem[i] %></li>
+        <% } %>
+    </ul>
+    <form method="post" action="/calendar">
+    <input class="event-input" type="text" name="eventInput" placeholder="Your event">
+    <button type="submit" class="btn btn-outline-dark">Add</button>
+</form>
+</div>
+   </body>
     
     <script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="javascript/calendar.js" defer></script>
+    
     <script>
         
     </script>

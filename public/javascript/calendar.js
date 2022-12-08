@@ -7,7 +7,7 @@ let date = new Date(),
     currentYear = date.getFullYear(),
     currentMonth = date.getMonth();
 console.log(currentMonth)
-
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
 const renderCalendar = () => {
@@ -22,17 +22,17 @@ const renderCalendar = () => {
     let liTag = "";
 
     for (let i = firstDayofMonth ; i > 0; i--) {
-        liTag += `<li class="inactive">${lastDateofLastMonth-i +1}</li>`
+        liTag += `<li class="day inactive">${lastDateofLastMonth-i +1}</li>`
         
     }
 
     for (let i = 1; i <= lastDateofMonth; i++) {
         let isToday = i ===  date.getDate() && currentMonth === new Date().getMonth() 
                       && currentYear === new Date().getFullYear() ? "active" :"";
-        liTag += `<li class="${isToday}">${i}</li>`
+        liTag += `<li class="day ${isToday}">${i}</li>`
     }
    for(let i =lastDayofMonth; i<6 ;i++){
-    liTag += `<li class="inactive">${i-lastDayofMonth +1}</li>`
+    liTag += `<li class="day inactive">${i-lastDayofMonth +1}</li>`
    }
 
     currentDate.text(`${months[currentMonth]} ${currentYear}`);
@@ -53,6 +53,7 @@ prevNextIcons.forEach(icon => {
 
             console.log(currentMonth);
             renderCalendar();
+            
         } else {
 
             if (currentMonth === 11) {
@@ -64,7 +65,18 @@ prevNextIcons.forEach(icon => {
             console.log(currentMonth);
 
             renderCalendar();
+            
         }
 
     })
 })
+
+let eventLi ="";
+    selectedDate = document.querySelectorAll(".day")
+    selectedDate.forEach(day=>{
+        day.addEventListener("click",()=>{
+        var clickedDate = day.textContent;
+        $(".event-date").text(clickedDate + " " + months[currentMonth]);
+        console.log(clickedDate);
+        })
+    })
