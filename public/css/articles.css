@@ -13,6 +13,13 @@ body {
   font-family: Playfair Display;
 }
 
+.result{
+font-size:3rem;
+position:absolute;
+top:2rem;
+left: 10rem;
+font-family: 'Lilita One', cursive;
+}
 
 li .post{
   padding-bottom:1rem;
@@ -25,28 +32,33 @@ li .post{
   margin-top: 8.125rem;
   list-style-type: none;
   z-index: 1;
- 
+
 }
 .article-title{
   background-color: black;
-  width:60rem;
+  width:65rem;
   height:3rem;
  color:rgb(219, 216, 216) ;
+ border-radius: 10px 10px 0 0;
  
 }
 .title-text{
-  font-family: Padkova;
+  font-family: 'Lilita One', cursive;
   margin-left: 20px;
-  margin-top:12px;
-  
+  margin-top:17px;
 }
 .article-text{
   text-align: left;
   margin-left:2rem;
   margin-top: 1rem;
   font-family: Padkova;
+  justify-content: center;
 }
 .article-box{
-background-color:#FFA09F;
-
+background-color:#FDCBC0;
+height:10rem;
+width:65rem;
+margin-bottom: 40px;
+border-radius: 10px;
 }
+

@@ -13,22 +13,24 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
+var eventItems = [];
 var article_search;
 
 app.get("/calendar",function(req,res){
-  res.render('calendar');
+
+  res.render('calendar',{newListItem: eventItems});
   
-jquery(".day-content").click(function(){
-  jquery('table.month td.day .day-content').css("color","purple");
 })
-  
+
+app.post("/calendar",function(req,res){
+var inputEvent = req.body.eventInput;
+eventItems.push(inputEvent);
+res.redirect("/calendar");
 })
 
 app.get('/',function(req,res){
   res.render('landingPage');
   
- 
 
 })
 
