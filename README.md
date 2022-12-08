@@ -48,6 +48,6 @@ ALWays is a web application to empower girls across the world. This app helps yo
   <ol>
 <li>Clone the repository using git clone [repository url]. </li>
 <li> Enter to the project directory cd [local repository]. </li>
-<li> You'll need to get your own API Key from Mediastack API and add it as an environment variable in a .env file. </li>
+<li> You'll need to get your own API Key from Mediastack API and update it in the articles.ejs file in th eviews folder. </li>
 <li> Install the dependencies using npm install.</li>
 <li> Run the project npm start, the project should be running on http://localhost:3000 . Enjoy!!</li>
