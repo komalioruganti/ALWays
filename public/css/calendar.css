@@ -1,147 +1,179 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
-  margin:0;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
 
- body{
+body {
   background: rgba(253, 247, 227, 1);
 }
 
 
-.monthly-calendar{
-  display:flex;
+.monthly-calendar {
+  display: flex;
   align-items: center;
- margin-left:10rem;
+  margin-left: 10rem;
   min-height: 100vh;
 }
-.wrapper{
+
+.wrapper {
   background-color: #fff9f7;
   width: 450px;
   border-radius: 10px;
 }
-.wrapper header{
+
+.wrapper header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px 30px 10px;
 }
-header .current-date{
+
+header .current-date {
   font-size: 1.49rem;
   font-weight: 500;
   color: #FFA09F;
 }
-header .calender-icons span{
-height: 38px;
-width:38px;
-margin: 0 1px;
+
+header .calender-icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
   text-align: center;
   line-height: 38px;
-  border-radius:50%;
+  border-radius: 50%;
   cursor: pointer;
-  font-size:1.9rem;
-  color:#FDCBC0;
+  font-size: 1.9rem;
+  color: #FDCBC0;
 }
-header .calender-icons span:hover{
-  background-color: rgba(253, 247, 227, 1) ;
+
+header .calender-icons span:hover {
+  background-color: rgba(253, 247, 227, 1);
 }
-header .calender-icons span:last-child{
-  margin-right: -10px;;
+
+header .calender-icons span:last-child {
+  margin-right: -10px;
+  ;
 }
-.calendar{
+
+.calendar {
   padding: 20px;
 }
-.calendar ul{
-   display:flex;
-   list-style: none;
-   flex-wrap: wrap;
-   text-align: center;
+
+.calendar ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  text-align: center;
 }
-.calendar .days li{
-  margin-bottom :30px;
+
+.calendar .days li {
+  margin-bottom: 30px;
   cursor: pointer;
   z-index: 1;
 }
-.calendar li.inactive{
-  color:#aaa;
+
+.calendar li.inactive {
+  color: #aaa;
 }
-.calendar li.active{
-  color:white;
+
+.calendar li.active {
+  color: white;
 }
-.calendar .weeks li{
+
+.calendar .weeks li {
   font-weight: 500;
-  margin-bottom :30px;
-  
+  margin-bottom: 30px;
+
 }
-.calendar ul li{
+
+.calendar ul li {
   width: calc(100%/7);
-  position:relative;
+  position: relative;
 }
-.calendar .days  li::before{
+
+.calendar .days li::before {
   content: "";
-  position:absolute;
-  height:40px;
+  position: absolute;
+  height: 40px;
   width: 40px;
-  top:50%;
-  left:50%;
-  transform :translate(-50%,-50%);
-border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
   z-index: -1;
 }
-.days  li:hover::before{
+
+.days li:hover::before {
   background-color: #ffd1d1;
 }
-.calendar li.active::before{
+
+.calendar li.active::before {
   background-color: #FFA09F;
 }
 
-#events{
+#events {
   display: inline-block;
   vertical-align: top;
-  width:500px;
+  width: 500px;
   background-color: #FFA09F;
   padding: 10px;
-  height:30rem;
+  height: 30rem;
   border-radius: 20px;
-  left:43rem;
-  top:5rem;
+  left: 43rem;
+  top: 4rem;
   z-index: 1;
-  position:absolute;
-  color:rgba(253, 247, 227, 1);
+  position: absolute;
+  color: rgba(253, 247, 227, 1);
 }
 
 #events-log div {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 14px;
   line-height: 1.4;
- display: hidden;
+  display: hidden;
 }
-.event-date{
-  position:absolute;
-  top : 2rem;
+
+.event-date {
+  position: absolute;
+  top: 2rem;
   left: 3rem;
-  font-size: 2rem;;
+  font-size: 2rem;
+  ;
 }
-.event-input{
+
+.event-input {
   border: hidden;
   border-bottom: 2px solid rgba(253, 247, 227, 1);
   background-color: #FFA09F;
-  height:3rem;
-  width:60%;
+  height: 3rem;
+  width: 40%;
+  outline: 0;
+  position: absolute;
+  top: 9rem;
+  left: 3rem;
+}
+
+.btn {
+  position: absolute;
+  top: 9rem;
+  left: 19rem;
+}
+
+.events {
+  position: absolute;
+  left: 3rem;
+  top: 13rem;
+}
+
+.events-date {
+  background-color: #FFA09F;
+  border: hidden;
+  height: 3rem;
+  left: 3rem;
   outline: 0;
   position: absolute;
   top: 6rem;
-  left:3rem;
-}
-.btn{
-  position: absolute;
-  top: 6rem;
-  left:23rem;
-}
-.events{
-  position: absolute;
-  left:3rem;
-  top:10rem;
 }
