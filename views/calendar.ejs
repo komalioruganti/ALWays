@@ -118,8 +118,8 @@
 
         </p>
         <form method="post" action="/calendar">
-
-            <input class="events-date" type="date" name="eventDate" placeholder="Date">
+            
+            <input class="events-date" onclick="GetEvents()" type="date" name="eventDate" placeholder="Date">
 
             <input class="event-input" type="text" name="eventInput" placeholder="Your event">
             <button type="submit" class="btn btn-outline-dark">Add or Get events</button>
@@ -130,8 +130,20 @@
 <script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script src="javascript/calendar.js" defer></script>
+<script>
+    async function GetEvents(){
+        const MongoClient = require('mongodb').MongoClient;
+    const uri = 'mongodb+srv://netTheCoder:welcome123@cluster0.ra2eh5p.mongodb.net/?retryWrites=true&w=majority';
 
+    const client = new MongoClient(uri, { useNewUrlParser: true });
 
+    // Connect to the client and query
+    await client.connect();
+    
+    const collection = client.db("SampleDatabase").collection("n");
+  
+    }
+</script>
 </body>
 
 </html>
