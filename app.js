@@ -1,8 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const jsdom = require('jsdom');
-const dom = new jsdom.JSDOM("");
-const jquery = require('jquery')(dom.window);
 const app = express();
 const http = require('http');
 const https = require('https');
@@ -14,8 +11,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+require("dotenv").config();
+
+const MongoUsername = process.env.MONGODB_USERNAME
+const MongoPassword = process.env.MONGODB_PASSWORD
+const apikey = process.env.MEDIASTACK_API_KEY
+
 const uri =
-  "mongodb+srv://netTheCoder:welcome123@cluster0.ra2eh5p.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://" + MongoUsername + ":" + MongoPassword + "@cluster0.ra2eh5p.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri);
 
@@ -40,7 +43,7 @@ app.get("/calendar", function (req, res) {
 
 app.post("/calendar", function (req, res) {
   inputEvent = req.body.eventInput;
-  console.log(inputEvent);
+
   inputDate = req.body.eventDate;
   eventsObj = {
     date: inputDate,
@@ -50,10 +53,6 @@ app.post("/calendar", function (req, res) {
     AddEvents().catch(console.dir);
     eventItems.push(inputEvent);
   }
-
-
-
-
   res.redirect("/calendar");
 })
 
@@ -135,10 +134,10 @@ app.post('/searchArticles', function (req, res) {
 
 })
 app.get('/articles', (req, res) => {
-  res.render('articles', { article_keyword: article_search })
+  res.render('articles', { article_keyword: article_search, apikey: apikey })
 })
 
 
-server.listen(3000, function (req, res) {
+app.listen(3000, function (req, res) {
   console.log("The server is running at port 3000");
 })

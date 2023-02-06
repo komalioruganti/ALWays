@@ -13,52 +13,57 @@ body {
   font-family: Playfair Display;
 }
 
-.result{
-font-size:3rem;
-position:absolute;
-top:2rem;
-left: 10rem;
-font-family: 'Lilita One', cursive;
+.result {
+  font-size: 3rem;
+  position: absolute;
+  top: 2rem;
+  left: 10rem;
+  font-family: 'Lilita One', cursive;
 }
 
-li .post{
-  padding-bottom:1rem;
+li .post {
+  padding-bottom: 1rem;
   margin-left: 150px;
   margin-top: 60px;
-  
+
 }
-.articles{
-  margin-left:9.7rem;
+
+.articles {
+  margin-left: 9.7rem;
   margin-top: 8.125rem;
   list-style-type: none;
   z-index: 1;
 
 }
-.article-title{
+
+.article-title {
   background-color: black;
-  width:65rem;
-  height:3rem;
- color:rgb(219, 216, 216) ;
- border-radius: 10px 10px 0 0;
- 
+  width: 65rem;
+  height: 3rem;
+  color: rgb(219, 216, 216);
+  border-radius: 10px 10px 0 0;
+  padding-top: 0.01rem;
 }
-.title-text{
+
+.title-text {
   font-family: 'Lilita One', cursive;
   margin-left: 20px;
-  margin-top:17px;
+  margin-top: 17px;
 }
-.article-text{
+
+.article-text {
   text-align: left;
-  margin-left:2rem;
+  margin-left: 2rem;
   margin-top: 1rem;
   font-family: Padkova;
   justify-content: center;
-}
-.article-box{
-background-color:#FDCBC0;
-height:10rem;
-width:65rem;
-margin-bottom: 40px;
-border-radius: 10px;
+
 }
 
+.article-box {
+  background-color: #FDCBC0;
+  height: 10rem;
+  width: 65rem;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
