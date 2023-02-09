@@ -14,7 +14,7 @@ const {userJoin,getCurrentUser } = require('./utils/users')
 
 require("dotenv").config();
 
-const uri = process.env.MONGODB_URI
+const uri = process.env.MONGODB_URI;
 const apikey = process.env.MEDIASTACK_API_KEY
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
@@ -29,9 +29,9 @@ var eventsObj = {};
 
 var username;
 
-app.get('/', (req, res) => {
-  res.render('login');
-})
+const {login,landingPage,chatRoom, getsearchArticles, articles, postsearchArticles} = require("./handlers")
+
+app.get('/', login)
 
 app.post('/', (req, res) => {
   username = req.body.username;
@@ -44,21 +44,12 @@ app.post('/', (req, res) => {
   Insert(new_user);
 })
 
-app.get('/landingPage', function (req, res) {
-  const date = new Date();
-  res.render('landingPage', { today: date.toDateString() });
-})
+app.get('/landingPage', landingPage )
 
-var eventItems = [];
-var resultArr = [];
-var inputEvent,
-  inputDate;
 
-app.get("/calendar", function (req, res) {
-  console.log(inputDate);
-  res.render('calendar', { newListItem: eventItems, resultArr, eventDate: inputDate ,uri: uri});
 
-})
+// app.get("/calendar",calendar );
+app.get('/chatRoom', chatRoom);
 
 app.post("/calendar", function (req, res) {
   inputEvent = req.body.eventInput;
@@ -139,9 +130,7 @@ async function findListings(client, resultsLimit) {
 }
 
 
-app.get('/chatRoom', function (req, res) {
-res.render('chatRoom');
-});
+
 
 
 
@@ -160,19 +149,9 @@ io.on("disconnect",(socket)=>{
 })
 
 
-app.get('/searchArticles', function (req, res) {
-  res.render('search_articles');
-})
+app.get('/searchArticles',getsearchArticles)
 
-app.post('/searchArticles', function (req, res) {
-  article_search = req.body.searchInput;
-  res.redirect("/articles");
+app.post('/searchArticles', postsearchArticles)
+app.get('/articles', articles)
 
-})
-app.get('/articles', (req, res) => {
-  res.render('articles', { article_keyword: article_search, apikey: apikey })
-})
-
-server.listen(3000, function (req, res) {
-  console.log("The server is running at port 3000");
-})
+server.listen(3000 )
